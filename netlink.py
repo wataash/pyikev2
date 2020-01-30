@@ -133,8 +133,9 @@ class NetlinkProtocol(object):
         while len(data) > 0:
             header, payload, attributes = self.parse_message(data)
             if header.type == NLMSG_ERROR and payload.error != 0:
-                raise NetlinkError(
-                    'Received error header!: {}'.format(os.strerror(-payload.error)))
+                print('Received error header!: {}'.format(os.strerror(-payload.error)))
+                # raise NetlinkError(
+                #     'Received error header!: {}'.format(os.strerror(-payload.error)))
             if header.type == NLMSG_DONE:
                 break
             data = data[header.length:]

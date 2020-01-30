@@ -1329,6 +1329,7 @@ class IkeSa(object):
 
 class IkeSaController:
     def __init__(self, my_addr, configuration):
+        print('cannot break?')
         self.ike_sas = []
         self.configuration = configuration
         self.xfrm = xfrm.Xfrm()
@@ -1339,6 +1340,7 @@ class IkeSaController:
         self.xfrm.flush_sas()
         for peer_addr, ike_conf in configuration.items():
             self.xfrm.create_policies(my_addr, peer_addr, ike_conf)
+        print('cannot break?')
 
     def _get_ike_sa_by_spi(self, spi):
         return next(x for x in self.ike_sas if x.my_spi == spi)

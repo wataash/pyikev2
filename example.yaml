@@ -1,5 +1,7 @@
 # IKE SA definitions
-sdn-openikev2-alice:
+#sdn-openikev2-alice:
+#wataash.com:
+10.0.0.1:
   id: bob@openikev2
   psk: testing
   dh: [5]

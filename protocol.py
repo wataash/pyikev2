@@ -1329,7 +1329,7 @@ class IkeSa(object):
 
 class IkeSaController:
     def __init__(self, my_addr, configuration):
-        print('cannot break?')
+        print('cannot break?')  # bp
         self.ike_sas = []
         self.configuration = configuration
         self.xfrm = xfrm.Xfrm()
@@ -1433,7 +1433,7 @@ class IkeSaController:
 
     def main_loop(self):
         # create network socket
-        sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)  # bp
         port = 500
         sock.bind((str(self.my_addr), port))
         logging.info('Listening from {}:{}'.format(self.my_addr, port))

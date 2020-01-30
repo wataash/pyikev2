@@ -63,11 +63,11 @@ ike_sa_controller = IkeSaController(ip_address(ip), configuration=configuration)
 
 
 def signal_handler(*unused):
-    print('SIGINT received. Exiting.')
+    print('SIGINT received. Exiting.')  # bp
     ike_sa_controller.close()
     sys.exit(0)
 
 
 signal.signal(signal.SIGINT, signal_handler)
 
-ike_sa_controller.main_loop()
+ike_sa_controller.main_loop()  # bp

@@ -11,7 +11,7 @@ from ipaddress import ip_address
 import yaml
 
 from configuration import Configuration
-from protocol import IkeSaController
+from protocol_ import IkeSaController
 
 __author__ = 'Alejandro Perez <alejandro.perez.mendez@gmail.com>'
 __version__ = "0.2"
